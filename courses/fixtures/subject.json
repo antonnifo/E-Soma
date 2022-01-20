@@ -1,0 +1,170 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Data Science",
+    "slug": "data-science"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 2,
+  "fields": {
+    "title": "Python for Web",
+    "slug": "python-for-web"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 3,
+  "fields": {
+    "title": "Javascript",
+    "slug": "javascript"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "owner": 1,
+    "subject": 1,
+    "title": "introduction to Python",
+    "slug": "introduction-to-python",
+    "overview": "This course acts as an introduction to python for data science",
+    "created": "2022-01-20T05:57:11.594Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "owner": 1,
+    "subject": 2,
+    "title": "Python Django",
+    "slug": "python-django",
+    "overview": "Introduction to Django",
+    "created": "2022-01-20T06:00:03.263Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 3,
+  "fields": {
+    "owner": 1,
+    "subject": 3,
+    "title": "Introductio to Javascript",
+    "slug": "introductio-to-javascript",
+    "overview": "This is an introduction to JavaScript for absolute beginners",
+    "created": "2022-01-20T06:03:52.624Z"
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "title": "Python Comments",
+    "description": "Comments can be used to explain Python code.\r\n\r\nComments can be used to make the code more readable.\r\n\r\nComments can be used to prevent execution when testing code"
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "course": 1,
+    "title": "Variables",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 3,
+  "fields": {
+    "course": 1,
+    "title": "Data Types",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 4,
+  "fields": {
+    "course": 1,
+    "title": "Numbers",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 5,
+  "fields": {
+    "course": 1,
+    "title": "Strings",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 6,
+  "fields": {
+    "course": 2,
+    "title": "Introduction to Django",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 7,
+  "fields": {
+    "course": 2,
+    "title": "Why Django",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 8,
+  "fields": {
+    "course": 2,
+    "title": "Django Installation",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 9,
+  "fields": {
+    "course": 2,
+    "title": "DJango Project Set Up",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 10,
+  "fields": {
+    "course": 3,
+    "title": "Getting started",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 11,
+  "fields": {
+    "course": 3,
+    "title": "Variables",
+    "description": ""
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 12,
+  "fields": {
+    "course": 3,
+    "title": "Operators",
+    "description": ""
+  }
+}
+]
