@@ -24,7 +24,7 @@ urlpatterns = [
          name='login'),
     path('accounts/logout/', auth_views.LogoutView.as_view(),
          name='logout'),
-    path('', include('courses.urls', namespace='courses')),
+    path('soma/', include('courses.urls')),
     path('admin/', admin.site.urls),
 ]
 
