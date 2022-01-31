@@ -18,6 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
+from courses.views import CourseListView
 
 urlpatterns = [
     path('accounts/login/', auth_views.LoginView.as_view(),
@@ -25,6 +26,7 @@ urlpatterns = [
     path('accounts/logout/', auth_views.LogoutView.as_view(),
          name='logout'),
     path('soma/', include('courses.urls')),
+    path('', CourseListView.as_view(), name='course_list'),
     path('admin/', admin.site.urls),
 ]
 
