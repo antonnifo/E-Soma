@@ -1,3 +1,4 @@
+from students.forms import CourseEnrollForm
 from django.views.generic.detail import DetailView
 from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
 from .models import Subject
@@ -178,7 +179,7 @@ class ContentOrderView(CsrfExemptMixin, JsonRequestResponseMixin, View):
         for id, order in self.request_json.items():
             Content.objects.filter(id=id,
                                    module__course__owner=request.user) \
-                                .update(order=order)
+                .update(order=order)
         return self.render_json_response({'saved': 'OK'})
 
 
@@ -202,3 +203,9 @@ class CourseListView(TemplateResponseMixin, View):
 class CourseDetailView(DetailView):
     model = Course
     template_name = 'courses/course/detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['enroll_form'] = CourseEnrollForm(
+            initial={'course': self.object})
+        return context
