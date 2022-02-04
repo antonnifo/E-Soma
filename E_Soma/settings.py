@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'embed_video',
+    'memcache_status',
 
 ]
 
@@ -143,3 +144,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
+
+
+# f you have multiple Memcached instances, you can use
+# a list for LOCATION
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
