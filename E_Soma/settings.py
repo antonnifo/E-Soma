@@ -161,3 +161,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
         ]
     }
+
+USERNAME = env('USERNAME')
+PASSWORD = env('PASSWORD')
