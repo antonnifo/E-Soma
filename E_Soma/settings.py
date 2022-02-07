@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'embed_video',
     'memcache_status',
+    'rest_framework',
 
 ]
 
@@ -154,3 +155,9 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
+
+REST_FRAMEWORK = {
+        'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        ]
+    }
