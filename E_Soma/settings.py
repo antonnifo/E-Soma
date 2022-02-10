@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'embed_video',
     'memcache_status',
     'rest_framework',
-    'chart',
+    'chat',
     'channels',
 
 ]
@@ -166,3 +166,5 @@ REST_FRAMEWORK = {
 
 USERNAME = env('USERNAME')
 PASSWORD = env('PASSWORD')
+
+ASGI_APPLICATION = 'E_Soma.routing.application'
