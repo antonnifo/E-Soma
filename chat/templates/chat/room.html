@@ -27,5 +27,28 @@ chatSocket.onclose = function(e) {
     };
 
 
-    
+var $input = $('#chat-message-input');
+var $submit = $('#chat-message-submit');
+
+$submit.click(function() {
+    var message = $input.val();
+        if(message) {
+            // send message in JSON format
+            chatSocket.send(JSON.stringify({'message': message}));
+
+            // clear input
+            $input.val('');
+            
+            // return focus
+            $input.focus();
+        }
+});
+
+$input.focus();
+$input.keyup(function(e) {
+    if (e.which === 13) {
+        // submit with enter / return key
+        $submit.click();
+    }
+});
 {% endblock %}
