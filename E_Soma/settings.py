@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'embed_video',
     'memcache_status',
     'rest_framework',
+    'chat',
+    'channels',
 
 ]
 
@@ -164,3 +166,12 @@ REST_FRAMEWORK = {
 
 USERNAME = env('USERNAME')
 PASSWORD = env('PASSWORD')
+
+ASGI_APPLICATION = 'E_Soma.routing.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+                'BACKEND': 'channels_redis.core.RedisChannelLayer',
+                'CONFIG': { 'hosts': [('127.0.0.1', 6379)],},
+    },
+}
